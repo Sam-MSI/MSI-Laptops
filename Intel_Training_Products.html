@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Gamme Gaming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ff0000;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .zoom-control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .zoom-label {
+            font-size: 14px;
+            color: #999;
+            min-width: 80px;
+        }
+
+        .zoom-slider {
+            width: 150px;
+            height: 6px;
+            background: #333;
+            border-radius: 10px;
+            outline: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        .zoom-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #ff0000;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .zoom-slider::-webkit-slider-thumb:hover {
+            background: #ff3333;
+            transform: scale(1.2);
+        }
+
+        .zoom-slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            background: #ff0000;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .zoom-slider::-moz-range-thumb:hover {
+            background: #ff3333;
+            transform: scale(1.2);
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+            transition: max-width 0.3s ease;
+        }
+
+        .product-card {
+            margin-bottom: 30px;
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #000;
+        }
+
+        .placeholder {
+            width: 100%;
+            aspect-ratio: 492/1344;
+            background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 18px;
+            border: 2px dashed #333;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .zoom-control {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 900px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .container {
+                max-width: 1100px;
+            }
+            
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .product-card {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LA GAMME MSI</h1>
+        <div class="zoom-control">
+            <span class="zoom-label">Zoom: <span id="zoom-value">100</span>%</span>
+            <input type="range" min="50" max="150" value="100" class="zoom-slider" id="zoomSlider">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\TITAN 18 HX.png" alt="Produit 1" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\STEALTH 18 HX AI.png" alt="Produit 2" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\Vector HX AI.png" alt="Produit 3" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\Crosshair HX AI.png" alt="Produit 4" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\Katana HX B14.png" alt="Produit 5" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\Claw 8 AI+.png" alt="Produit 6" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\Claw A1M.png" alt="Produit 7" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\PRESTIGE 16 AI+ Mercedes-AMG.png" alt="Produit 8" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\PRESTIGE 13 AI+ Ukiyo-e.png" alt="Produit 9" class="product-image">
+        </div>
+
+        <div class="product-card">
+            <img src="C:\local\Event Intel Shop\Intel training\VenturePro 15 A2RW.png" alt="Produit 10" class="product-image">
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 La Gamme MSI
+    </div>
+
+    <script>
+        const slider = document.getElementById('zoomSlider');
+        const zoomValue = document.getElementById('zoom-value');
+        const container = document.querySelector('.container');
+        
+        function getBaseWidth() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth >= 1600) return 1100;
+            if (screenWidth >= 1200) return 900;
+            return 750;
+        }
+        
+        slider.addEventListener('input', function() {
+            // Sauvegarder le ratio de position dans la page (0 = haut, 1 = bas)
+            const scrollTop = window.scrollY;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollRatio = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+            
+            const zoom = this.value;
+            zoomValue.textContent = zoom;
+            
+            const baseWidth = getBaseWidth();
+            const newWidth = (baseWidth * zoom) / 100;
+            container.style.maxWidth = newWidth + 'px';
+            
+            // Attendre que le DOM se mette à jour
+            requestAnimationFrame(() => {
+                // Calculer la nouvelle position basée sur le même ratio
+                const newScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const newScrollTop = newScrollHeight * scrollRatio;
+                window.scrollTo(0, newScrollTop);
+            });
+        });
+        
+        window.addEventListener('resize', function() {
+            const zoom = slider.value;
+            const baseWidth = getBaseWidth();
+            const newWidth = (baseWidth * zoom) / 100;
+            container.style.maxWidth = newWidth + 'px';
+        });
+    </script>
+</body>
+</html>
