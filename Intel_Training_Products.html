@@ -93,11 +93,15 @@
             transform: scale(1.2);
         }
 
+        .zoom-wrapper {
+            transform-origin: top center;
+            transition: transform 0.1s ease-out;
+        }
+
         .container {
             max-width: 750px;
             margin: 0 auto;
             padding: 20px;
-            transition: max-width 0.3s ease;
         }
 
         .product-card {
@@ -118,18 +122,6 @@
             height: auto;
             display: block;
             background: #000;
-        }
-
-        .placeholder {
-            width: 100%;
-            aspect-ratio: 492/1344;
-            background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 18px;
-            border: 2px dashed #333;
         }
 
         .footer {
@@ -171,7 +163,7 @@
 
         @media (min-width: 1600px) {
             .container {
-                max-width: 1100px;
+                max-width: 1400px;
             }
             
             .header h1 {
@@ -189,49 +181,51 @@
         <h1>LA GAMME MSI</h1>
         <div class="zoom-control">
             <span class="zoom-label">Zoom: <span id="zoom-value">100</span>%</span>
-            <input type="range" min="50" max="150" value="100" class="zoom-slider" id="zoomSlider">
+            <input type="range" min="50" max="100" value="80" class="zoom-slider" id="zoomSlider">
         </div>
     </div>
 
-    <div class="container">
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/TITAN 18 HX.png" alt="Produit 1" class="product-image">
-        </div>
+    <div class="zoom-wrapper">
+        <div class="container">
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/TITAN 18 HX.png" alt="Produit 1" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/STEALTH 18 HX AI.png" alt="Produit 2" class="product-image">
-        </div>
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/STEALTH 18 HX AI.png" alt="Produit 2" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Vector HX AI.png" alt="Produit 3" class="product-image">
-        </div>
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Vector HX AI.png" alt="Produit 3" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Crosshair HX AI.png" alt="Produit 4" class="product-image">
-        </div>
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Crosshair HX AI.png" alt="Produit 4" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Katana HX B14.png" alt="Produit 5" class="product-image">
-        </div>
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Katana HX B14.png" alt="Produit 5" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Claw 8 AI+.png" alt="Produit 6" class="product-image">
-        </div>
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Claw 8 AI+.png" alt="Produit 6" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Claw A1M.png" alt="Produit 7" class="product-image">
-        </div>
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Claw A1M.png" alt="Produit 7" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/PRESTIGE 16 AI+ Mercedes-AMG.png" alt="Produit 8" class="product-image">
-        </div>
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/PRESTIGE 16 AI+ Mercedes-AMG.png" alt="Produit 8" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/PRESTIGE 13 AI+ Ukiyo-e.png" alt="Produit 9" class="product-image">
-        </div>
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/PRESTIGE 13 AI+ Ukiyo-e.png" alt="Produit 9" class="product-image">
+            </div>
 
-        <div class="product-card">
-            <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/VenturePro 15 A2RW.png" alt="Produit 10" class="product-image">
+            <div class="product-card">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/VenturePro 15 A2RW.png" alt="Produit 10" class="product-image">
+            </div>
         </div>
     </div>
 
@@ -242,43 +236,36 @@
     <script>
         const slider = document.getElementById('zoomSlider');
         const zoomValue = document.getElementById('zoom-value');
-        const container = document.querySelector('.container');
-        
-        function getBaseWidth() {
-            const screenWidth = window.innerWidth;
-            if (screenWidth >= 1600) return 1100;
-            if (screenWidth >= 1200) return 900;
-            return 750;
-        }
+        const zoomWrapper = document.querySelector('.zoom-wrapper');
         
         slider.addEventListener('input', function() {
-            // Calculer le point central de la vue actuelle
-            const viewportCenter = window.scrollY + (window.innerHeight / 2);
+            const zoom = this.value / 100;
+            zoomValue.textContent = this.value;
+            
+            // Calculer le point de vue actuel en %
+            const scrollTop = window.scrollY;
+            const viewportHeight = window.innerHeight;
             const totalHeight = document.documentElement.scrollHeight;
-            const centerRatio = viewportCenter / totalHeight;
             
-            const zoom = this.value;
-            zoomValue.textContent = zoom;
+            // Point central de la vue en % de la page totale
+            const viewCenter = ((scrollTop + viewportHeight / 2) / totalHeight) * 100;
             
-            const baseWidth = getBaseWidth();
-            const newWidth = (baseWidth * zoom) / 100;
-            container.style.maxWidth = newWidth + 'px';
-            
-            // Attendre que le DOM se mette à jour
-            requestAnimationFrame(() => {
-                // Repositionner pour garder le même point central
-                const newTotalHeight = document.documentElement.scrollHeight;
-                const newViewportCenter = newTotalHeight * centerRatio;
-                const newScrollTop = newViewportCenter - (window.innerHeight / 2);
-                window.scrollTo(0, newScrollTop);
-            });
+            // Zoom depuis ce point
+            zoomWrapper.style.transformOrigin = `center ${viewCenter}%`;
+            zoomWrapper.style.transform = `scale(${zoom})`;
         });
         
-        window.addEventListener('resize', function() {
-            const zoom = slider.value;
-            const baseWidth = getBaseWidth();
-            const newWidth = (baseWidth * zoom) / 100;
-            container.style.maxWidth = newWidth + 'px';
+        // Mettre à jour aussi pendant le scroll
+        window.addEventListener('scroll', function() {
+            if (slider.value != 100) {
+                const zoom = slider.value / 100;
+                const scrollTop = window.scrollY;
+                const viewportHeight = window.innerHeight;
+                const totalHeight = document.documentElement.scrollHeight;
+                const viewCenter = ((scrollTop + viewportHeight / 2) / totalHeight) * 100;
+                
+                zoomWrapper.style.transformOrigin = `center ${viewCenter}%`;
+            }
         });
     </script>
 
