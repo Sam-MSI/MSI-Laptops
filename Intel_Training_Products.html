@@ -252,10 +252,10 @@
         }
         
         slider.addEventListener('input', function() {
-            // Sauvegarder le ratio de position dans la page (0 = haut, 1 = bas)
-            const scrollTop = window.scrollY;
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollRatio = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+            // Calculer le point central de la vue actuelle
+            const viewportCenter = window.scrollY + (window.innerHeight / 2);
+            const totalHeight = document.documentElement.scrollHeight;
+            const centerRatio = viewportCenter / totalHeight;
             
             const zoom = this.value;
             zoomValue.textContent = zoom;
@@ -266,9 +266,10 @@
             
             // Attendre que le DOM se mette à jour
             requestAnimationFrame(() => {
-                // Calculer la nouvelle position basée sur le même ratio
-                const newScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const newScrollTop = newScrollHeight * scrollRatio;
+                // Repositionner pour garder le même point central
+                const newTotalHeight = document.documentElement.scrollHeight;
+                const newViewportCenter = newTotalHeight * centerRatio;
+                const newScrollTop = newViewportCenter - (window.innerHeight / 2);
                 window.scrollTo(0, newScrollTop);
             });
         });
@@ -280,5 +281,6 @@
             container.style.maxWidth = newWidth + 'px';
         });
     </script>
+
 </body>
 </html>
