@@ -1,0 +1,174 @@
+{
+  "products": [
+    {
+      "id": "0",
+      "name": "MSI Titan 18 HX AI",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-titan+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-Portable-MSI/Par-marque/nsh159789/w-4?SDM=list&SFilt=1!13%2c115!16086&ssi=5&sso=1"
+        },
+        {
+          "retailer": "BOULANGER",
+          "url": "https://www.boulanger.com/c/nav-filtre/pc-portable-gamer-49965?_etat_produit~neuf|_merchant_des~boulanger|brand~msi|nouvelles_facettes_ordinateurs_____gamme_gamer~titan&sorting_price_f905=asc"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "MSI Stealth 18 HX AI",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-stealth+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-Portable-MSI/Par-marque/nsh159789/w-4?SDM=list&SFilt=1!13%2c110!16086&ssi=5&sso=1"
+        },
+        {
+          "retailer": "BOULANGER",
+          "url": "https://www.boulanger.com/c/nav-filtre/pc-portable-gamer-49965?_etat_produit~neuf|_merchant_des~boulanger|brand~msi|nouvelles_facettes_ordinateurs_____gamme_gamer~stealth&sorting_price_f905=asc"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "MSI Vector HX AI",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-vector+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-Portable-MSI/Par-marque/nsh159789/w-4?SDM=list&SFilt=1!13%2c101!16086&ssi=5&sso=1"
+        },
+        {
+          "retailer": "BOULANGER",
+          "url": "https://www.boulanger.com/c/nav-filtre/pc-portable-gamer-49965?_etat_produit~neuf|_merchant_des~boulanger|brand~msi|nouvelles_facettes_ordinateurs_____gamme_gamer~vector&sorting_price_f905=asc"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "MSI Crosshair HX AI",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-crosshair+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/SearchResult/ResultList.aspx?SDM=list&Search=MSI+Crosshair&SFilt=1!13%2cMSI!attributes.brand__Marque&sft=1"
+        },
+        {
+          "retailer": "BOULANGER",
+          "url": "https://www.boulanger.com/c/nav-filtre/pc-portable-gamer-49965?_etat_produit~neuf|_merchant_des~boulanger|brand~msi|nouvelles_facettes_ordinateurs_____gamme_gamer~pulse&sorting_price_f905=asc"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "MSI Katana HX B14",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-katana+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-Portable-MSI/Par-marque/nsh159789/w-4?SDM=list&SFilt=1!13%2c76!16086&ssi=5&sso=1"
+        },
+        {
+          "retailer": "BOULANGER",
+          "url": "https://www.boulanger.com/c/nav-filtre/pc-portable-gamer-49965?_etat_produit~neuf|_merchant_des~boulanger|brand~msi|nouvelles_facettes_ordinateurs_____gamme_gamer~katana&sorting_price_f905=asc"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "MSI Cyborg",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-cyborg+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-Portable-MSI/Par-marque/nsh159789/w-4?SDM=list&SFilt=1!13%2c76!16086&ssi=5&sso=1"
+        },
+        {
+          "retailer": "BOULANGER",
+          "url": "https://www.boulanger.com/c/nav-filtre/pc-portable-gamer-49965?_etat_produit~neuf|_merchant_des~boulanger|brand~msi|nouvelles_facettes_ordinateurs_____gamme_gamer~katana&sorting_price_f905=asc"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "MSI Claw 8 AI+",
+      "links": [
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/n562784/Toutes-les-Consoles/Console-portable-MSI-Claw?SDM=list&ssi=5&sso=1"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "MSI Claw A1M",
+      "links": [
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/n562784/Toutes-les-Consoles/Console-portable-MSI-Claw?SDM=list&ssi=5&sso=1"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "MSI Prestige 16 AI+ Mercedes-AMG",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-prestige-amg+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-Portable-MSI/Par-marque/nsh159789/w-4?SDM=list&SFilt=1!13%2c114!16086&ssi=5&sso=1"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "MSI Prestige 13 AI+ Ukiyo-e",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-prestige-ukiyo+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-Portable-MSI/Par-marque/nsh159789/w-4?SDM=list&SFilt=1!13%2c114!16086&ssi=5&sso=1"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "MSI VenturePro 15 A2RW",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-venture+fb-C000000992+fdi-1.html?sort=1"
+        },
+        {
+          "retailer": "BOULANGER",
+          "url": "https://www.boulanger.com/c/nav-filtre/tous-les-ordinateurs-portables?_merchant_des%7Eboulanger%7Cbrand%7Emsi%7Cnouvelles_facettes_ordinateurs_____gamme_gamer%7Eventure=&sorting_price_f905=asc"
+        }
+      ]
+    }
+  ]
+}
