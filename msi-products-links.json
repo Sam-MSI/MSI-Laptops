@@ -169,6 +169,16 @@
           "url": "https://www.boulanger.com/c/nav-filtre/tous-les-ordinateurs-portables?_merchant_des%7Eboulanger%7Cbrand%7Emsi%7Cnouvelles_facettes_ordinateurs_____gamme_gamer%7Eventure=&sorting_price_f905=asc"
         }
       ]
+    },
+    {
+      "id": "11",
+      "name": "MSI Modern F13MG",
+      "links": [
+        {
+          "retailer": "LDLC",
+          "url": "https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/+ftxt-modern+fb-C000000992+fdi-1.html?sort=1"
+        }
+      ]
     }
   ]
 }
