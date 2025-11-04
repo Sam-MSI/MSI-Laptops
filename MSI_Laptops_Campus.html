@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Gamme Gaming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ff0000;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-select {
+            padding: 10px 15px;
+            background: #1a1a1a;
+            color: #ffffff;
+            border: 2px solid #ff0000;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+            min-width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .product-select:hover {
+            background: #2a2a2a;
+            border-color: #ff3333;
+        }
+
+        .product-select:focus {
+            border-color: #ff3333;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .zoom-control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .zoom-label {
+            font-size: 14px;
+            color: #999;
+            min-width: 80px;
+        }
+
+        .zoom-slider {
+            width: 150px;
+            height: 6px;
+            background: #333;
+            border-radius: 10px;
+            outline: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        .zoom-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #ff0000;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .zoom-slider::-webkit-slider-thumb:hover {
+            background: #ff3333;
+            transform: scale(1.2);
+        }
+
+        .zoom-slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            background: #ff0000;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .zoom-slider::-moz-range-thumb:hover {
+            background: #ff3333;
+            transform: scale(1.2);
+        }
+
+        .zoom-wrapper {
+            transform-origin: top center;
+            transition: transform 0.1s ease-out;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-card {
+            margin-bottom: 30px;
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: none;
+        }
+
+        .product-card.active {
+            display: block;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #000;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .product-select {
+                width: 100%;
+            }
+            
+            .zoom-control {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 900px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .container {
+                max-width: 1400px;
+            }
+            
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .product-card {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LA GAMME MSI</h1>
+        <div class="controls">
+            <select class="product-select" id="productSelect">
+                <option value="0">MSI Titan 18 HX AI</option>
+                <option value="1">MSI Stealth 18 HX AI</option>
+                <option value="2">MSI Vector HX AI</option>
+                <option value="3">MSI Crosshair HX AI</option>
+                <option value="4">MSI Katana HX B14</option>
+                <option value="5">MSI Cyborg</option>
+                <option value="6">MSI Claw 8 AI+</option>
+                <option value="7">MSI Claw A1M</option>
+                <option value="8">MSI Prestige 16 AI+ Mercedes-AMG</option>
+                <option value="9">MSI Prestige 13 AI+ Ukiyo-e</option>
+                <option value="10">MSI VenturePro 15 A2RW</option>
+            </select>
+            <div class="zoom-control">
+                <span class="zoom-label">Zoom: <span id="zoom-value">100</span>%</span>
+                <input type="range" min="50" max="100" value="100" class="zoom-slider" id="zoomSlider">
+            </div>
+        </div>
+    </div>
+
+    <div class="zoom-wrapper">
+        <div class="container">
+            <div class="product-card" data-product="0">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/TITAN 18 HX.png" alt="MSI Titan 18 HX AI" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="1">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/STEALTH 18 HX AI.png" alt="MSI Stealth 18 HX AI" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="2">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Vector HX AI.png" alt="MSI Vector HX AI" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="3">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Crosshair HX AI.png" alt="MSI Crosshair HX AI" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="4">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Katana HX B14.png" alt="MSI Katana HX B14" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="5">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Cyborg 15.png" alt="MSI Cyborg" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="6">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Claw 8 AI+.png" alt="MSI Claw 8 AI+" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="7">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/Claw A1M.png" alt="MSI Claw A1M" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="8">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/PRESTIGE 16 AI+ Mercedes-AMG.png" alt="MSI Prestige 16 AI+ Mercedes-AMG" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="9">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/PRESTIGE 13 AI+ Ukiyo-e.png" alt="MSI Prestige 13 AI+ Ukiyo-e" class="product-image">
+            </div>
+
+            <div class="product-card" data-product="10">
+                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Source/Images/VenturePro 15 A2RW.png" alt="MSI VenturePro 15 A2RW" class="product-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 La Gamme MSI
+    </div>
+
+    <script>
+        const slider = document.getElementById('zoomSlider');
+        const zoomValue = document.getElementById('zoom-value');
+        const zoomWrapper = document.querySelector('.zoom-wrapper');
+        const productSelect = document.getElementById('productSelect');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        // Gestion du filtre de produits
+        productSelect.addEventListener('change', function() {
+            const selectedValue = this.value;
+            
+            productCards.forEach(card => {
+                if (selectedValue === 'all') {
+                    card.classList.add('active');
+                } else {
+                    if (card.getAttribute('data-product') === selectedValue) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
+                }
+            });
+            
+            // Scroll vers le haut quand on change de produit
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Afficher uniquement le premier produit (Titan) par défaut
+        productCards.forEach((card, index) => {
+            if (index === 0) {
+                card.classList.add('active');
+            }
+        });
+        
+        // Gestion du zoom
+        slider.addEventListener('input', function() {
+            const zoom = this.value / 100;
+            zoomValue.textContent = this.value;
+            
+            const scrollTop = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const totalHeight = document.documentElement.scrollHeight;
+            
+            const viewCenter = ((scrollTop + viewportHeight / 2) / totalHeight) * 100;
+            
+            zoomWrapper.style.transformOrigin = `center ${viewCenter}%`;
+            zoomWrapper.style.transform = `scale(${zoom})`;
+        });
+        
+        window.addEventListener('scroll', function() {
+            if (slider.value != 100) {
+                const zoom = slider.value / 100;
+                const scrollTop = window.scrollY;
+                const viewportHeight = window.innerHeight;
+                const totalHeight = document.documentElement.scrollHeight;
+                const viewCenter = ((scrollTop + viewportHeight / 2) / totalHeight) * 100;
+                
+                zoomWrapper.style.transformOrigin = `center ${viewCenter}%`;
+            }
+        });
+    </script>
+
+</body>
+</html>
