@@ -25,7 +25,7 @@
             backdrop-filter: blur(10px);
             padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #ff0000;
+            border-bottom: 2px solid #cccccc;
             z-index: 100;
             display: flex;
             align-items: center;
@@ -51,7 +51,7 @@
             padding: 10px 15px;
             background: #1a1a1a;
             color: #ffffff;
-            border: 2px solid #ff0000;
+            border: 2px solid #cccccc;
             border-radius: 8px;
             font-size: 14px;
             cursor: pointer;
@@ -62,12 +62,12 @@
 
         .product-select:hover {
             background: #2a2a2a;
-            border-color: #ff3333;
+            border-color: #ffffff;
         }
 
         .product-select:focus {
-            border-color: #ff3333;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+            border-color: #ffffff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
         .zoom-control {
@@ -97,21 +97,21 @@
             appearance: none;
             width: 18px;
             height: 18px;
-            background: #ff0000;
+            background: #cccccc;
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
         .zoom-slider::-webkit-slider-thumb:hover {
-            background: #ff3333;
+            background: #ffffff;
             transform: scale(1.2);
         }
 
         .zoom-slider::-moz-range-thumb {
             width: 18px;
             height: 18px;
-            background: #ff0000;
+            background: #cccccc;
             border-radius: 50%;
             cursor: pointer;
             border: none;
@@ -119,7 +119,7 @@
         }
 
         .zoom-slider::-moz-range-thumb:hover {
-            background: #ff3333;
+            background: #ffffff;
             transform: scale(1.2);
         }
 
@@ -139,7 +139,7 @@
             background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
             transition: transform 0.3s ease;
             display: none;
         }
@@ -157,6 +157,96 @@
             height: auto;
             display: block;
             background: #000;
+        }
+
+        .image-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Rognage individuel pour chaque produit - ajustez margin-bottom négatif pour rogner le bas */
+        [data-product="0"] .product-image {
+            margin-bottom: -110px; /* Titan - rogne 100px du bas (exemple) */
+        }
+
+        [data-product="1"] .product-image {
+            margin-bottom: 0px; /* Stealth - aucun rognage */
+        }
+
+        [data-product="2"] .product-image {
+            margin-bottom: -130px; /* Vector - aucun rognage */
+        }
+
+        [data-product="3"] .product-image {
+            margin-bottom: -250px; /* Crosshair - aucun rognage */
+        }
+
+        [data-product="4"] .product-image {
+            margin-bottom: -330px; /* Katana - aucun rognage */
+        }
+
+        [data-product="5"] .product-image {
+            margin-bottom: -570px; /* Cyborg - aucun rognage */
+        }
+
+        [data-product="6"] .product-image {
+            margin-bottom: -610px; /* Claw 8 AI+ - aucun rognage */
+        }
+
+        [data-product="7"] .product-image {
+            margin-bottom: -610px; /* Claw A1M - aucun rognage */
+        }
+
+        [data-product="8"] .product-image {
+            margin-bottom: -100px; /* Prestige 16 - aucun rognage */
+        }
+
+        [data-product="9"] .product-image {
+            margin-bottom: -240px; /* Prestige 13 - aucun rognage */
+        }
+
+        [data-product="10"] .product-image {
+            margin-bottom: -530px; /* VenturePro - aucun rognage */
+        }
+
+        [data-product="11"] .product-image {
+            margin-bottom: -920px; /* Modern F13MG - aucun rognage */
+        }
+
+        .product-links {
+            padding: 20px 25px;
+            background: #0d0d0d;
+            border-bottom: 1px solid #333;
+        }
+
+        .links-container {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .retailer-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            border: 1px solid #666;
+            border-radius: 6px;
+            color: #cccccc;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .retailer-link:hover {
+            background: #2a2a2a;
+            border-color: #ffffff;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
         }
 
         .footer {
@@ -192,6 +282,15 @@
             .zoom-control {
                 width: 100%;
                 justify-content: center;
+            }
+
+            .links-container {
+                flex-direction: column;
+            }
+
+            .retailer-link {
+                width: 100%;
+                text-align: center;
             }
         }
 
@@ -236,6 +335,7 @@
                 <option value="8">MSI Prestige 16 AI+ Mercedes-AMG</option>
                 <option value="9">MSI Prestige 13 AI+ Ukiyo-e</option>
                 <option value="10">MSI VenturePro 15 A2RW</option>
+                <option value="11">MSI Modern F13MG</option>
             </select>
             <div class="zoom-control">
                 <span class="zoom-label">Zoom: <span id="zoom-value">100</span>%</span>
@@ -247,47 +347,91 @@
     <div class="zoom-wrapper">
         <div class="container">
             <div class="product-card" data-product="0">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/TITAN 18 HX.png" alt="MSI Titan 18 HX AI" class="product-image">
+                <div class="product-links" data-product-id="0">
+                    <div class="links-container"></div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/TITAN 18 HX.png" alt="MSI Titan 18 HX AI" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="1">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/STEALTH 16_18 HX AI.png" alt="MSI Stealth 18 HX AI" class="product-image">
+                <div class="product-links" data-product-id="1">
+                    <div class="links-container"></div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/STEALTH 16_18 HX AI.png" alt="MSI Stealth 18 HX AI" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="2">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Vector HX AI.png" alt="MSI Vector HX AI" class="product-image">
+                <div class="product-links" data-product-id="2"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Vector HX AI.png" alt="MSI Vector HX AI" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="3">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Crosshair HX AI.png" alt="MSI Crosshair HX AI" class="product-image">
+                <div class="product-links" data-product-id="3"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Crosshair HX AI.png" alt="MSI Crosshair HX AI" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="4">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Katana HX B14.png" alt="MSI Katana HX B14" class="product-image">
+                <div class="product-links" data-product-id="4"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Katana HX B14.png" alt="MSI Katana HX B14" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="5">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Cyborg 15-17.png" alt="MSI Cyborg" class="product-image">
+                <div class="product-links" data-product-id="5"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Cyborg 15-17.png" alt="MSI Cyborg" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="6">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Claw 8 AI+.png" alt="MSI Claw 8 AI+" class="product-image">
+                <div class="product-links" data-product-id="6"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Claw 8 AI+.png" alt="MSI Claw 8 AI+" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="7">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Claw A1M.png" alt="MSI Claw A1M" class="product-image">
+                <div class="product-links" data-product-id="7"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Claw A1M.png" alt="MSI Claw A1M" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="8">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/PRESTIGE 16 AI+ Mercedes-AMG.png" alt="MSI Prestige 16 AI+ Mercedes-AMG" class="product-image">
+                <div class="product-links" data-product-id="8"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/PRESTIGE 16 AI+ Mercedes-AMG.png" alt="MSI Prestige 16 AI+ Mercedes-AMG" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="9">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/PRESTIGE 13 AI+ Ukiyo-e.png" alt="MSI Prestige 13 AI+ Ukiyo-e" class="product-image">
+                <div class="product-links" data-product-id="9"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/PRESTIGE 13 AI+ Ukiyo-e.png" alt="MSI Prestige 13 AI+ Ukiyo-e" class="product-image">
+                </div>
             </div>
 
             <div class="product-card" data-product="10">
-                <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/VenturePro 15 A2RW.png" alt="MSI VenturePro 15 A2RW" class="product-image">
+                <div class="product-links" data-product-id="10"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Venture PRO 15.png" alt="MSI VenturePro 15 A2RW" class="product-image">
+                </div>
+            </div>
+
+            <div class="product-card" data-product="11">
+                <div class="product-links" data-product-id="11"><div class="links-container"></div></div>
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/Campus/Source/Images/Modern F13MG.png" alt="MSI Modern F13MG" class="product-image">
+                </div>
             </div>
         </div>
     </div>
@@ -302,6 +446,32 @@
         const zoomWrapper = document.querySelector('.zoom-wrapper');
         const productSelect = document.getElementById('productSelect');
         const productCards = document.querySelectorAll('.product-card');
+        
+        // URL du fichier JSON
+        const JSON_URL = 'https://raw.githubusercontent.com/Sam-MSI/MSI-Laptops/main/msi-products-links.json';
+        
+        // Charger les liens des produits depuis le JSON
+        async function loadProductLinks() {
+            try {
+                const response = await fetch(JSON_URL);
+                const data = await response.json();
+                
+                // Pour chaque produit, ajouter les liens
+                data.products.forEach(product => {
+                    const linksContainer = document.querySelector(`[data-product-id="${product.id}"] .links-container`);
+                    if (linksContainer) {
+                        linksContainer.innerHTML = product.links.map(link => 
+                            `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="retailer-link">Voir chez ${link.retailer}</a>`
+                        ).join('');
+                    }
+                });
+            } catch (error) {
+                console.error('Erreur lors du chargement des liens:', error);
+            }
+        }
+        
+        // Charger les liens au démarrage
+        loadProductLinks();
         
         // Gestion du filtre de produits
         productSelect.addEventListener('change', function() {
@@ -360,3 +530,4 @@
 
 </body>
 </html>
+
