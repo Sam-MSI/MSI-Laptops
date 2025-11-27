@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": "0",
+      "name": "MSI Prestige 16 AI+ MercedesAMG B2VMG-087FR",
+      "links": [
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-portable-MSI-Prestige-16-AI-Mercedes-AMG-Motorsport-B2VMG-16-Intel-Core-Ultra-9-32-Go-RAM-2-To-SSD-Gris-anthracite/a21849339/w-4?oref=5c31e2b4-8f6a-e11e-a267-ed3dcfea6909"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "MSI Prestige 13 AI+ Ukiyoe Edition A2VMG-077FR",
+      "links": [
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-portable-MSI-Prestige-13-AI-Ukiyoe-Edition-A2VMG-077FR-13-3-Intel-Core-Ultra-9-32-Go-RAM-2-To-SSD-Noir/a21849338/w-4"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "MSI Vector 16 HX AI A2XWIG-015FR",
+      "links": [
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-Portable-Gaming-MSI-Vector-16-HX-AI-A2XWIG-015FR-16-QHD-240-Hz-Intel-Core-Ultra-9-32-Go-RAM-1-To-SSD-Nvidia-GeForce-RTX-5080-Noir/a21184546/w-4"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "MSI Crosshair 16 HX AI D2XWGKG-001FR",
+      "links": [
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-portable-gaming-MSI-Crosshair-16-HX-AI-D2XWGKG-001FR-16-QHD-240-Hz-Intel-Core-Ultra-7-16-Go-RAM-512-Go-SSD-Nvidia-GeForce-RTX-5070-Noir/a21184551/w-4"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "MSI Katana 15 HX B14WFK-469FR",
+      "links": [
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-portable-Gaming-MSI-Katana-15-HX-B14WFK-469FR-15-6-Full-HD-144-Hz-Intel-Core-i7-16-Go-RAM-512-Go-SSD-Nvidia-GeForce-RTX-5060-Noir/a21660840/w-4"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "MSI Cyborg 15 B2WFKG-260FR",
+      "links": [
+        {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/PC-portable-gaming-MSI-Cyborg-15-B2RWFKG-260FR-Intel-Core-7-16-Go-RAM-512-Go-SSD-Nvidia-GeForce-RTX-5060-Noir/a21782455/w-4"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "MSI Claw 8 AI+ A2VM-020FR",
+      "links": [
+              {
+          "retailer": "FNAC",
+          "url": "https://www.fnac.com/Console-portable-Windows-MSI-Claw-8-AI-A2VM-020FR-Noir-et-Sable/a21141551/w-4"
+        }
+      ]
+    }
+  ]
+}
